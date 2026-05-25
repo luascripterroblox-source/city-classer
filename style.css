@@ -1,0 +1,500 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0d0d0d;
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  border-bottom: 1px solid #1e1e1e;
+  position: sticky;
+  top: 0;
+  background: #0d0d0d;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.logo span {
+  color: #f5a623;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #666;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #f5a623;
+}
+
+.dev-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 40px;
+  background: #0f0a00;
+  border-bottom: 2px solid #f5a62344;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  background: #f5a623;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse 1.4s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.dev-banner strong {
+  font-size: 11px;
+  color: #f5a623;
+  letter-spacing: 2px;
+}
+
+.dev-banner span {
+  font-size: 11px;
+  color: #7a5f20;
+}
+
+.timer-section {
+  text-align: center;
+  padding: 36px 40px;
+  border-bottom: 1px solid #1a1a1a;
+  background: #0a0800;
+}
+
+.timer-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #f5a623;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.timer-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.tbox {
+  background: #111;
+  border: 1px solid #222;
+  padding: 20px 28px;
+  min-width: 90px;
+}
+
+.tbox span {
+  font-size: 48px;
+  font-weight: 900;
+  color: #f5a623;
+  line-height: 1;
+  display: block;
+}
+
+.tbox p {
+  font-size: 10px;
+  color: #444;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.tdiv {
+  font-size: 40px;
+  font-weight: 900;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid #1a1a1a;
+  min-height: 400px;
+}
+
+.hero-text {
+  padding: 60px 40px;
+  border-right: 1px solid #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.tag {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #f5a623;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -2px;
+}
+
+h1 span {
+  color: #f5a623;
+}
+
+.desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.9;
+  max-width: 360px;
+}
+
+.play-btn {
+  display: inline-block;
+  width: fit-content;
+  background: #f5a623;
+  color: #000;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding: 14px 36px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.play-btn:hover {
+  background: #ffbe4d;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.stat {
+  padding: 32px;
+  border-bottom: 1px solid #1a1a1a;
+  border-right: 1px solid #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.stat:nth-child(even) { border-right: none; }
+.stat:nth-child(3), .stat:nth-child(4) { border-bottom: none; }
+
+.num {
+  font-size: 36px;
+  font-weight: 900;
+  color: #f5a623;
+  line-height: 1;
+}
+
+.lbl {
+  font-size: 10px;
+  color: #444;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.section {
+  padding: 56px 40px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+h2 {
+  font-size: 34px;
+  font-weight: 900;
+  margin: 8px 0 36px;
+  letter-spacing: -0.5px;
+}
+
+h2 span { color: #f5a623; }
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #1e1e1e;
+}
+
+.feat {
+  padding: 28px 24px;
+  border-right: 1px solid #1e1e1e;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.feat:nth-child(3n) { border-right: none; }
+.feat:nth-child(4), .feat:nth-child(5), .feat:nth-child(6) { border-bottom: none; }
+
+.feat-num {
+  font-size: 10px;
+  color: #f5a623;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.feat h3 {
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  color: #e8e8e8;
+}
+
+.feat p {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.economy-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #1e1e1e;
+}
+
+.economy-left {
+  padding: 36px;
+  border-right: 1px solid #1e1e1e;
+  background: #0a0a0a;
+}
+
+.currency-name {
+  font-size: 28px;
+  font-weight: 900;
+  color: #f5a623;
+  letter-spacing: 3px;
+}
+
+.currency-sub {
+  font-size: 12px;
+  color: #555;
+  margin-top: 8px;
+}
+
+.economy-right {
+  padding: 28px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pill {
+  background: #111;
+  border: 1px solid #222;
+  padding: 10px 18px;
+  font-size: 11px;
+  color: #888;
+  font-weight: 800;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pill::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #f5a623;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.npc-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border: 1px solid #1e1e1e;
+}
+
+.npc {
+  padding: 24px 16px;
+  text-align: center;
+  border-right: 1px solid #1e1e1e;
+}
+
+.npc:last-child { border-right: none; }
+
+.npc-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.npc-name {
+  font-size: 12px;
+  font-weight: 800;
+  color: #ccc;
+}
+
+.npc-role {
+  font-size: 10px;
+  color: #444;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-top: 3px;
+}
+
+.npc-badge {
+  display: inline-block;
+  background: #f5a62315;
+  color: #f5a623;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 3px 8px;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+.npc-more .npc-icon { opacity: 0.3; }
+.npc-more .npc-name { color: #444; }
+
+.npc-note {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #444;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 12px 18px;
+  border: 1px solid #1e1e1e;
+  background: #0a0a0a;
+}
+
+.wip-section {
+  text-align: center;
+  background: #0a0800;
+}
+
+.wip-desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.9;
+  max-width: 520px;
+  margin: 0 auto 32px;
+}
+
+.wip-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wip-tags span {
+  background: #111;
+  border: 1px solid #222;
+  padding: 8px 18px;
+  font-size: 11px;
+  color: #777;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  border-top: 1px solid #1a1a1a;
+}
+
+footer p {
+  font-size: 11px;
+  color: #333;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* ==========================================================================
+   НОВИЙ БЛОК: АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ (МЕДІА-ЗАПИТИ)
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr; /* Складаємо головний екран в одну колонку */
+  }
+  .hero-text {
+    border-right: none;
+    border-bottom: 1px solid #1a1a1a;
+  }
+  .features {
+    grid-template-columns: repeat(2, 1fr); /* Фічі стають по дві в ряд */
+  }
+  .feat:nth-child(3n) { border-right: 1px solid #1e1e1e; }
+  .feat:nth-child(2n) { border-right: none; }
+  
+  .npc-grid {
+    grid-template-columns: repeat(3, 1fr); /* НПЦ стають по три в ряд */
+  }
+  .npc:nth-child(3n) { border-right: none; }
+}
+
+@media (max-width: 650px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+  .section, .hero-text, .timer-section, footer {
+    padding: 40px 20px;
+  }
+  h1 {
+    font-size: 44px;
+  }
+  .timer-boxes {
+    flex-wrap: wrap; /* Таймер не стискається, а переноситься */
+  }
+  .tdiv {
+    display: none; /* Ховаємо двокрапки на малих екранах для краси */
+  }
+  .features, .npc-grid, .economy-box {
+    grid-template-columns: 1fr; /* Все стає в одну суцільну колонку */
+  }
+  .feat, .npc {
+    border-right: none !important;
+    border-bottom: 1px solid #1e1e1e !important;
+  }
+  .feat:last-child, .npc:last-child {
+    border-bottom: none !important;
+  }
+  .economy-left {
+    border-right: none;
+    border-bottom: 1px solid #1e1e1e;
+  }
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
